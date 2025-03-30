@@ -85,7 +85,7 @@ echo "16. SEND FILE_MD5"
 MD5=`cat $WORKING_DIR/$FILE_NAME | md5sum | cut -d " " -f 1`
 
 
-echo "DATOS MD5: $MD5" | nc $IPSERVER $PORT
+echo "FILE_DATA_MD5 $MD5" | nc $IPSERVER $PORT
 
 echo "18:LISTEN"
 DATA=`nc -l $PORT`
